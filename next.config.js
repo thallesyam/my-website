@@ -1,7 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const path = require("path")
+const withImages = require("next-images")
 
-module.exports = nextConfig
+module.exports = withImages({
+  exclude: path.resolve(__dirname, "src/assets/svg"),
+
+  images: {
+    disableStaticImages: true,
+  },
+
+  webpack(config) {
+    return config
+  },
+})
