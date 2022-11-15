@@ -1,0 +1,83 @@
+@import '../../styles/variables.scss';
+
+.about {
+  background-color: #0e0e0e;
+  padding: 6rem 4rem;
+
+  > section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    max-width: 77rem;
+    margin: 0 auto;
+
+    > div {
+      width: 100%;
+    }
+
+    .icon_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: 1s all ease;
+      height: 400px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .tech_icon {
+        position: absolute;
+        border-radius: 4px;
+        width: 72px;
+        height: 72px;
+        animation: icon-move 3s ease 2.9s infinite alternate;
+      }
+
+      .first_icon {
+        top: 50px;
+        left: 200px;
+      }
+
+      .second_icon {
+        bottom: 100px;
+        left: 100px;
+      }
+
+      .third_icon {
+        top: 100px;
+        right: 90px;
+      }
+
+      @keyframes icon-move {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(10px, -40px, 0);
+        }
+      }
+    }
+
+    .text_container {
+      h2 {
+        font-size: 2.5rem;
+        color: $text-white-500;
+        margin: 0;
+
+        span {
+          color: $primary-500;
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.8rem;
+        color: $text-gray-400;
+        margin: 1.5rem 0 0;
+      }
+    }
+  }
+}
