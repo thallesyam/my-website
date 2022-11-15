@@ -1,0 +1,73 @@
+@import '../variables.scss';
+
+.title_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: calc(80vh - 70px);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+
+  > h1 {
+    font-size: 2rem;
+
+    > span {
+      display: block;
+      color: $primary-500;
+    }
+  }
+
+  p {
+    text-align: left;
+    margin: 1rem 0 1.5rem;
+    display: block;
+    font-size: 1rem;
+    color: $text-gray-500;
+  }
+
+  div {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    button {
+      width: 100%;
+      max-width: 150px;
+      height: 40px;
+      cursor: pointer;
+      transition: filter, 0.5s;
+      cursor: pointer;
+      border: none;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      p {
+        color: #fff;
+        margin: 0;
+        font-size: 0.875rem;
+      }
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    .btn_primary {
+      background-color: #25d366;
+    }
+
+    .btn_secondary {
+      background-color: $primary-900;
+    }
+  }
+}
