@@ -9,7 +9,7 @@ type Props = {
 export function NavLink({ text, href }: Props) {
   return (
     <Link className={style.link} href={href}>
-      <p>{text}</p>
+      {text}
     </Link>
   )
 }
