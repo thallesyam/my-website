@@ -40,7 +40,12 @@ export function SkillsSection() {
                 aria-label={skill.name as string}
               >
                 <span>{skill.name}</span>
-                <img src={skill.icon?.url} alt={skill.name as string} />
+                <img
+                  aria-label={skill.name as string}
+                  onClick={(event) => handleHover(event)}
+                  src={skill.icon?.url}
+                  alt={skill.name as string}
+                />
               </div>
             ))}
           </div>

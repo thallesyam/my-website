@@ -14,11 +14,6 @@ export function ExperienceSection() {
     setSelectedIdCompany(data?.jobs[0].id)
   }, [data])
 
-  console.log({
-    data,
-    selectedIdCompany,
-  })
-
   return (
     <section className={style.experience} id="experience">
       <section>
