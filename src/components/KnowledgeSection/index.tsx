@@ -90,7 +90,7 @@ export function KnowledgeSection() {
   }
 
   return (
-    <section className={style.experience}>
+    <section className={style.experience} id="knowledge">
       <section>
         <h5>
           Conhecimentos <span>.</span>

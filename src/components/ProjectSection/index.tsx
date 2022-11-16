@@ -25,7 +25,7 @@ const projects = [
 
 export function ProjectSection() {
   return (
-    <section className={style.project}>
+    <section className={style.project} id="projects">
       <section>
         <h4>
           Projetos <span>.</span>

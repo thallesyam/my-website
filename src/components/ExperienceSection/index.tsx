@@ -43,7 +43,7 @@ export function ExperienceSection() {
   const company = jobs.find((job) => job.id === selectedIdCompany)
 
   return (
-    <section className={style.experience}>
+    <section className={style.experience} id="experience">
       <section>
         <h3>
           Experiência <span>.</span>

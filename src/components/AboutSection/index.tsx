@@ -7,7 +7,7 @@ import style from './styles.module.scss'
 
 export function AboutSection() {
   return (
-    <section className={style.about}>
+    <section className={style.about} id="about">
       <section>
         <div className={style.icon_container}>
           <About />

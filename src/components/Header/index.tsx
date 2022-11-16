@@ -19,7 +19,6 @@ export function Header() {
           <NavLink href="#projects" text="Projetos" />
           <NavLink href="#experience" text="Experiência" />
           <NavLink href="#knowledge" text="Conhecimentos" />
-          <NavLink href="#contact" text="Contato" />
         </nav>
       </section>
     </header>
