@@ -32,8 +32,17 @@
       transition: 1s all ease;
       height: 400px;
 
+      img {
+        width: 500px;
+        object-fit: cover;
+      }
+
       @media (max-width: 768px) {
         height: 200px;
+
+        img {
+          width: 400px;
+        }
       }
 
       &:hover {
@@ -58,7 +67,7 @@
       }
 
       .second_icon {
-        bottom: 100px;
+        bottom: 0px;
         left: 100px;
 
         @media (max-width: 768px) {

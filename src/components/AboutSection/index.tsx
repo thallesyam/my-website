@@ -1,4 +1,4 @@
-import { About } from '../../assets/About'
+import About from '../../assets/about.png'
 import { Css } from '../../assets/Css'
 import { React } from '../../assets/React'
 import { Typescript } from '../../assets/Typescript'
@@ -14,7 +14,7 @@ export function AboutSection() {
     <section className={style.about} id="about">
       <section>
         <div className={style.icon_container}>
-          <About />
+          <img src={About} alt="" />
 
           <div className={`${style.tech_icon} ${style.first_icon}`}>
             <Typescript />
