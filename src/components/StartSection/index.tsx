@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import { WhatsappLogo, LinkedinLogo } from 'phosphor-react'
 import { Header } from '../Header'
 
@@ -28,14 +29,23 @@ export function StartSection() {
         </p>
 
         <div>
-          <button className={style.btn_primary}>
+          <Link
+            target="_blank"
+            href="https://encurtador.com.br/joW16"
+            className={style.btn_primary}
+          >
             <WhatsappLogo size={16} />
             <p>Whatsapp</p>
-          </button>
-          <button className={style.btn_secondary}>
+          </Link>
+
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/thalles-ian/"
+            className={style.btn_secondary}
+          >
             <LinkedinLogo size={16} />
             <p>Linkedin</p>
-          </button>
+          </Link>
         </div>
       </section>
     </section>

@@ -13,11 +13,26 @@ export function Footer() {
         <nav>
           <NavLink
             href="https://www.linkedin.com/in/thalles-ian/"
+            target="_blank"
             text="Linkedin"
           />
-          <NavLink href="" text="Whatsapp" />
-          <NavLink href="https://www.github.com/thallesyam" text="Github" />
-          <NavLink href="" text="Download Cv" />
+          <NavLink
+            target="_blank"
+            href="https://encurtador.com.br/joW16"
+            text="Whatsapp"
+          />
+
+          <NavLink
+            target="_blank"
+            href="https://www.github.com/thallesyam"
+            text="Github"
+          />
+          <NavLink
+            target="_blank"
+            href="curriculo.pdf"
+            download
+            text="Download Cv"
+          />
         </nav>
       </section>
     </header>
