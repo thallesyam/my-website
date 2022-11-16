@@ -1,0 +1,88 @@
+@import '../../styles/variables.scss';
+
+.experience {
+  padding: 6rem 4rem;
+
+  > section {
+    max-width: 77rem;
+    margin: 0 auto;
+
+    > h3 {
+      font-size: 2.5rem;
+
+      span {
+        color: $primary-500;
+      }
+    }
+
+    .container {
+      display: flex;
+      gap: 2rem;
+
+      .tab_container {
+        width: 17.188rem;
+
+        .tab_item {
+          margin: 1rem 0;
+          position: relative;
+          padding: 1.5rem;
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          display: block;
+          width: 100%;
+          text-align: left;
+
+          > p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+        }
+
+        .tab_item.isActive {
+          > p {
+            color: $primary-500;
+          }
+
+          &::after {
+            content: '';
+            width: 2px;
+            height: 100%;
+            background: $primary-gradient;
+            position: absolute;
+            left: 0px;
+            top: 0;
+          }
+        }
+      }
+
+      .content_container {
+        width: 100%;
+
+        .content_header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          > p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+          }
+
+          > span {
+            font-size: 1rem;
+          }
+        }
+
+        .content_body {
+          font-size: 1.25rem;
+          line-height: 1.8rem;
+          color: #d4d4d4;
+          margin: 1.5rem 0 0;
+        }
+      }
+    }
+  }
+}
