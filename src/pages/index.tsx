@@ -1,5 +1,6 @@
 import { AboutSection } from '../components/AboutSection'
 import { ExperienceSection } from '../components/ExperienceSection'
+import { ProjectSection } from '../components/ProjectSection'
 import { StartSection } from '../components/StartSection'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <StartSection />
       <AboutSection />
       <ExperienceSection />
+      <ProjectSection />
     </main>
   )
 }

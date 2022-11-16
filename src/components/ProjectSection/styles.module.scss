@@ -1,0 +1,94 @@
+@import '../../styles/variables.scss';
+
+.project {
+  background-color: #0e0e0e;
+  padding: 6rem 4rem;
+
+  > section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 77rem;
+    margin: 0 auto;
+
+    > h4 {
+      font-size: 2.5rem;
+
+      span {
+        color: $primary-500;
+      }
+    }
+
+    .cards_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .card {
+        flex-basis: calc(33% - 20px);
+        flex-grow: 1;
+        padding: 2rem;
+        background-color: #000;
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        span {
+          font-size: 1rem;
+          color: $text-gray-400;
+          margin-bottom: 1rem;
+          display: block;
+        }
+
+        .card_button_container {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          > a {
+            width: 100%;
+            padding: 0.875rem;
+            border-radius: 0.25rem;
+            border: none;
+            font-size: 1rem;
+            transition: filter, 0.5s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              filter: brightness(0.8);
+            }
+          }
+
+          .disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+
+          .github {
+            background-color: #161b22;
+          }
+
+          .view_project {
+            background: $primary-gradient;
+          }
+        }
+      }
+    }
+
+    .githubLink {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: $primary-500;
+    }
+  }
+}

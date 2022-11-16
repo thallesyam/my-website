@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import { AnchorHTMLAttributes } from 'react'
 import style from './styles.module.scss'
 
-type Props = {
+type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
   text: string
   href: string
 }
 
-export function NavLink({ text, href }: Props) {
+export function NavLink({ text, href, ...rest }: Props) {
   return (
-    <Link className={style.link} href={href}>
+    <Link {...rest} className={`${style.link} ${rest.className}`} href={href}>
       {text}
     </Link>
   )
