@@ -10,6 +10,7 @@ const projects = [
       'RentX é uma aplicação de locadora de veículos. Focada em proporcionar uma melhor experiência no aluguel',
     githubLink: '',
     projectLink: '',
+    color: '#56ccf2',
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const projects = [
       'Aplicação para controle de perguntas, com votação e ordem de prioridade',
     githubLink: '',
     projectLink: '',
+    color: '#56ccf2',
   },
 ]
 
@@ -31,7 +33,11 @@ export function ProjectSection() {
 
         <div className={style.cards_container}>
           {projects.map((project) => (
-            <div key={project.id} className={style.card}>
+            <div
+              key={project.id}
+              className={style.card}
+              style={{ border: `1px solid ${project.color}` }}
+            >
               <p>{project.title}</p>
 
               <span>{project.description}</span>
