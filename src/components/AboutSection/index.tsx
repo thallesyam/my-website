@@ -2,10 +2,14 @@ import { About } from '../../assets/About'
 import { Css } from '../../assets/Css'
 import { React } from '../../assets/React'
 import { Typescript } from '../../assets/Typescript'
+import { useSingleTextQuery } from '../../graphql/generated'
 
 import style from './styles.module.scss'
 
 export function AboutSection() {
+  const { data } = useSingleTextQuery()
+  const about = data?.singleTexts[0].about
+
   return (
     <section className={style.about} id="about">
       <section>
@@ -28,14 +32,7 @@ export function AboutSection() {
             Quem sou <span>.</span>
           </h2>
 
-          <p>
-            Meu nome é Thalles, sou apaixonado por construir soluções úteis que
-            ajudem a criar experiências únicas e marcantes para os usuários. Sou
-            um desenvolvedor frontend entusiasta da stack Javascript. Amo
-            estudar sobre arquitetura de software, design patterns, paradigmas
-            de programação e utilizo todas essas habilidades e competências para
-            resolver problemas através da tecnologia.
-          </p>
+          <p>{about}</p>
         </div>
       </section>
     </section>

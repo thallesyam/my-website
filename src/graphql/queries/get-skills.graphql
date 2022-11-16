@@ -1,0 +1,11 @@
+query Skill {
+  skills {
+    icon {
+      id
+      url
+    }
+    name
+    id
+    description
+  }
+}

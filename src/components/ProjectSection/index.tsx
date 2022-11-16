@@ -1,29 +1,11 @@
 import Link from 'next/link'
+import { useProjectQuery } from '../../graphql/generated'
 import { NavLink } from '../NavLink'
 import style from './styles.module.scss'
 
-const projects = [
-  {
-    id: 1,
-    title: 'Rentx',
-    description:
-      'RentX é uma aplicação de locadora de veículos. Focada em proporcionar uma melhor experiência no aluguel',
-    githubLink: '',
-    projectLink: '',
-    color: '#56ccf2',
-  },
-  {
-    id: 2,
-    title: 'Letmeask',
-    description:
-      'Aplicação para controle de perguntas, com votação e ordem de prioridade',
-    githubLink: '',
-    projectLink: '',
-    color: '#56ccf2',
-  },
-]
-
 export function ProjectSection() {
+  const { data } = useProjectQuery()
+
   return (
     <section className={style.project} id="projects">
       <section>
@@ -32,7 +14,7 @@ export function ProjectSection() {
         </h4>
 
         <div className={style.cards_container}>
-          {projects.map((project) => (
+          {data?.projects.map((project) => (
             <div
               key={project.id}
               className={style.card}
@@ -43,10 +25,16 @@ export function ProjectSection() {
               <span>{project.description}</span>
 
               <div className={style.card_button_container}>
-                <Link href={project.githubLink} className={style.github}>
+                <Link
+                  href={project.githubLink as string}
+                  className={style.github}
+                >
                   github
                 </Link>
-                <Link href={project.projectLink} className={style.view_project}>
+                <Link
+                  href={project.projectLink as string}
+                  className={style.view_project}
+                >
                   visualizar
                 </Link>
               </div>

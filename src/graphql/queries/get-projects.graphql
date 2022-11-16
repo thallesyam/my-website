@@ -1,0 +1,10 @@
+query Project {
+  projects {
+    githubLink
+    description
+    color
+    id
+    title
+    projectLink
+  }
+}

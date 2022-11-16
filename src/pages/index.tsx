@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import { AboutSection } from '../components/AboutSection'
 import { ExperienceSection } from '../components/ExperienceSection'
 import { Footer } from '../components/Footer'
-import { KnowledgeSection } from '../components/KnowledgeSection'
+import { SkillsSection } from '../components/SkillsSection'
 import { ProjectSection } from '../components/ProjectSection'
 import { StartSection } from '../components/StartSection'
 
@@ -28,7 +28,7 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <KnowledgeSection />
+        <SkillsSection />
       </ScrollReveal>
 
       <Footer />

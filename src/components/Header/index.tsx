@@ -19,7 +19,7 @@ export function Header() {
           <NavLink href="#about" text="Quem sou" />
           <NavLink href="#experience" text="Experiência" />
           <NavLink href="#projects" text="Projetos" />
-          <NavLink href="#knowledge" text="Conhecimentos" />
+          <NavLink href="#skills" text="Conhecimentos" />
         </nav>
 
         <MobileMenu />

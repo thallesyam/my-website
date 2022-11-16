@@ -1,0 +1,7 @@
+query SingleText {
+  singleTexts {
+    titleH1
+    subtitle
+    about
+  }
+}

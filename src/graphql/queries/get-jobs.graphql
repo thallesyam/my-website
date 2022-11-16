@@ -1,0 +1,9 @@
+query Job {
+  jobs {
+    id
+    period
+    role
+    description
+    company
+  }
+}

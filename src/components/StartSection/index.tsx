@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { WhatsappLogo, LinkedinLogo } from 'phosphor-react'
+import { useSingleTextQuery } from '../../graphql/generated'
 import { Header } from '../Header'
 
 const ScrollReveal = dynamic(() => import('../ScrollReveal'), {
@@ -10,6 +11,15 @@ const ScrollReveal = dynamic(() => import('../ScrollReveal'), {
 import style from './styles.module.scss'
 
 export function StartSection() {
+  const { data } = useSingleTextQuery()
+  const titleSpliced = data?.singleTexts[0].titleH1?.split(' ')
+  const subtitle = data?.singleTexts[0].subtitle
+
+  const principal = titleSpliced?.splice(0, titleSpliced.length - 2).join(' ')
+  const highlight = titleSpliced
+    ?.splice(titleSpliced.length - 2, titleSpliced.length)
+    .join(' ')
+
   return (
     <section className={style.start_container}>
       <Header />
@@ -17,16 +27,12 @@ export function StartSection() {
       <section className={style.title_section} id="home">
         <ScrollReveal>
           <h1>
-            Navegando pelo mundo da programação e ajudando empresas a
-            construírem
-            <span>jornadas inesquecíveis.</span>
+            {principal}
+            <span>{highlight}</span>
           </h1>
         </ScrollReveal>
 
-        <p>
-          Sempre priorizando a experiência do usuário e trazendo uma visão que
-          vai destacar o seu produto no mercado.
-        </p>
+        <p>{subtitle}</p>
 
         <div>
           <Link
