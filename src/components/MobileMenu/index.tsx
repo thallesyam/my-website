@@ -7,7 +7,7 @@ export function MobileMenu() {
 
   useEffect(() => {
     if (!window) return
-    const body = window?.document.getElementsByTagName('body')[0]
+    const body = window.document.getElementsByTagName('body')[0]
     if (!body) return
 
     if (isActive) {

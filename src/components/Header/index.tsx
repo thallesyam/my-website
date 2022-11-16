@@ -17,8 +17,8 @@ export function Header() {
         <nav className={style.desktop_menu}>
           <NavLink href="#home" text="Ínicio" />
           <NavLink href="#about" text="Quem sou" />
-          <NavLink href="#projects" text="Projetos" />
           <NavLink href="#experience" text="Experiência" />
+          <NavLink href="#projects" text="Projetos" />
           <NavLink href="#knowledge" text="Conhecimentos" />
         </nav>
 

@@ -1,5 +1,10 @@
+import dynamic from 'next/dynamic'
 import { WhatsappLogo, LinkedinLogo } from 'phosphor-react'
 import { Header } from '../Header'
+
+const ScrollReveal = dynamic(() => import('../ScrollReveal'), {
+  ssr: false,
+})
 
 import style from './styles.module.scss'
 
@@ -8,11 +13,14 @@ export function StartSection() {
     <section className={style.start_container}>
       <Header />
 
-      <section className={style.title_section}>
-        <h1>
-          Navegando pelo mundo da programação e ajudando empresas a construírem
-          <span>jornadas inesquecíveis.</span>
-        </h1>
+      <section className={style.title_section} id="home">
+        <ScrollReveal>
+          <h1>
+            Navegando pelo mundo da programação e ajudando empresas a
+            construírem
+            <span>jornadas inesquecíveis.</span>
+          </h1>
+        </ScrollReveal>
 
         <p>
           Sempre priorizando a experiência do usuário e trazendo uma visão que

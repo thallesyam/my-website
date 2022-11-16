@@ -9,7 +9,11 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export function NavLink({ text, href, ...rest }: Props) {
   return (
-    <Link {...rest} className={`${style.link} ${rest.className}`} href={href}>
+    <Link
+      {...rest}
+      className={`${style.link} ${rest.className ? rest.className : ''}`}
+      href={href}
+    >
       {text}
     </Link>
   )
