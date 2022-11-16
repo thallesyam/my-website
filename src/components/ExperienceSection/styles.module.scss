@@ -3,6 +3,10 @@
 .experience {
   padding: 6rem 4rem;
 
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+
   > section {
     max-width: 77rem;
     margin: 0 auto;
@@ -18,6 +22,10 @@
     .container {
       display: flex;
       gap: 2rem;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .tab_container {
         width: 17.188rem;
@@ -64,6 +72,12 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          @media (max-width: 768px) {
+            align-items: flex-start;
+            gap: 1rem;
+            flex-direction: column;
+          }
 
           > p {
             font-size: 1.5rem;
