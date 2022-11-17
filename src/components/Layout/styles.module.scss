@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.container_medium {
+  width: 100%;
+  max-width: 77rem;
+  margin: 0 auto;
+}
+
+.container_small {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+}

@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.container {
+  padding: 6rem 4rem;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.container.light {
+  background-color: #0e0e0e;
+}

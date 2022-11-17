@@ -6,6 +6,9 @@ import { SkillsSection } from '../components/SkillsSection'
 import { ProjectSection } from '../components/ProjectSection'
 import { StartSection } from '../components/StartSection'
 import Head from 'next/head'
+import { Header } from '../components/Header'
+
+import style from '../styles/pages/Home.module.scss'
 
 const ScrollReveal = dynamic(() => import('../components/ScrollReveal'), {
   ssr: false,
@@ -13,7 +16,7 @@ const ScrollReveal = dynamic(() => import('../components/ScrollReveal'), {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Head>
         <meta
           name="viewport"
@@ -23,25 +26,35 @@ export default function Home() {
         <title>Portifólio | Thalles Ian</title>
       </Head>
 
-      <StartSection />
+      <Header />
 
-      <ScrollReveal>
-        <AboutSection />
-      </ScrollReveal>
+      <main>
+        <StartSection />
 
-      <ScrollReveal>
-        <ExperienceSection />
-      </ScrollReveal>
+        <ScrollReveal
+          className={`${style.container} ${style.light}`}
+          id="about"
+        >
+          <AboutSection />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <ProjectSection />
-      </ScrollReveal>
+        <ScrollReveal className={style.container} id="experience">
+          <ExperienceSection />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <SkillsSection />
-      </ScrollReveal>
+        <ScrollReveal
+          className={`${style.container} ${style.light}`}
+          id="project"
+        >
+          <ProjectSection />
+        </ScrollReveal>
+
+        <ScrollReveal className={style.container} id="skill">
+          <SkillsSection />
+        </ScrollReveal>
+      </main>
 
       <Footer />
-    </main>
+    </>
   )
 }

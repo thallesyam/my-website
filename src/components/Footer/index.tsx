@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Layout } from '../Layout'
 
 import { NavLink } from '../NavLink'
 
@@ -6,8 +7,8 @@ import style from './styles.module.scss'
 
 export function Footer() {
   return (
-    <header className={style.footer}>
-      <section>
+    <Layout className={style.footer} asChild>
+      <footer>
         <Link href="/">Created by Thalles with 🖤</Link>
 
         <nav>
@@ -34,7 +35,7 @@ export function Footer() {
             text="Download Cv"
           />
         </nav>
-      </section>
-    </header>
+      </footer>
+    </Layout>
   )
 }

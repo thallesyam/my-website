@@ -1,101 +1,90 @@
 @import '../../styles/variables.scss';
 
 .experience {
-  padding: 6rem 4rem;
+  > h3 {
+    font-size: 2.5rem;
 
-  @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    span {
+      color: $primary-500;
+    }
   }
 
-  > section {
-    max-width: 77rem;
-    margin: 0 auto;
+  .container {
+    display: flex;
+    gap: 2rem;
 
-    > h3 {
-      font-size: 2.5rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
-      span {
-        color: $primary-500;
+    .tab_container {
+      width: 17.188rem;
+
+      .tab_item {
+        margin: 1rem 0;
+        position: relative;
+        padding: 1.5rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+
+        > p {
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+      }
+
+      .tab_item.isActive {
+        > p {
+          color: $primary-500;
+        }
+
+        &::after {
+          content: '';
+          width: 2px;
+          height: 100%;
+          background: $primary-gradient;
+          position: absolute;
+          left: 0px;
+          top: 0;
+        }
       }
     }
 
-    .container {
-      display: flex;
-      gap: 2rem;
+    .content_container {
+      width: 100%;
 
-      @media (max-width: 768px) {
-        flex-direction: column;
-      }
+      .content_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-      .tab_container {
-        width: 17.188rem;
-
-        .tab_item {
-          margin: 1rem 0;
-          position: relative;
-          padding: 1.5rem;
-          cursor: pointer;
-          background-color: transparent;
-          border: none;
-          display: block;
-          width: 100%;
-          text-align: left;
-
-          > p {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 700;
-          }
+        @media (max-width: 768px) {
+          align-items: flex-start;
+          gap: 1rem;
+          flex-direction: column;
         }
 
-        .tab_item.isActive {
-          > p {
-            color: $primary-500;
-          }
+        > p {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin: 0;
+        }
 
-          &::after {
-            content: '';
-            width: 2px;
-            height: 100%;
-            background: $primary-gradient;
-            position: absolute;
-            left: 0px;
-            top: 0;
-          }
+        > span {
+          font-size: 1rem;
         }
       }
 
-      .content_container {
-        width: 100%;
-
-        .content_header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          @media (max-width: 768px) {
-            align-items: flex-start;
-            gap: 1rem;
-            flex-direction: column;
-          }
-
-          > p {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0;
-          }
-
-          > span {
-            font-size: 1rem;
-          }
-        }
-
-        .content_body {
-          font-size: 1.25rem;
-          line-height: 1.8rem;
-          color: #d4d4d4;
-          margin: 1.5rem 0 0;
-        }
+      .content_body {
+        font-size: 1.25rem;
+        line-height: 1.8rem;
+        color: #d4d4d4;
+        margin: 1.5rem 0 0;
       }
     }
   }

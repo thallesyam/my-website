@@ -18,8 +18,8 @@ export function Header() {
           <NavLink href="#home" text="Ínicio" />
           <NavLink href="#about" text="Quem sou" />
           <NavLink href="#experience" text="Experiência" />
-          <NavLink href="#projects" text="Projetos" />
-          <NavLink href="#skills" text="Conhecimentos" />
+          <NavLink href="#project" text="Projetos" />
+          <NavLink href="#skill" text="Conhecimentos" />
         </nav>
 
         <MobileMenu />

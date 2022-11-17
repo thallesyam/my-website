@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { WhatsappLogo, LinkedinLogo } from 'phosphor-react'
 import { useSingleTextQuery } from '../../graphql/generated'
 import { Header } from '../Header'
+import { Layout } from '../Layout'
 
 const ScrollReveal = dynamic(() => import('../ScrollReveal'), {
   ssr: false,
@@ -22,9 +23,7 @@ export function StartSection() {
 
   return (
     <section className={style.start_container}>
-      <Header />
-
-      <section className={style.title_section} id="home">
+      <Layout className={style.title_section} id="home" size="sm">
         <ScrollReveal>
           <h1>
             {principal}
@@ -53,7 +52,7 @@ export function StartSection() {
             <p>Linkedin</p>
           </Link>
         </div>
-      </section>
+      </Layout>
     </section>
   )
 }

@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, ReactNode } from 'react'
+import React, { useRef, useEffect, ReactNode, HTMLAttributes } from 'react'
 import scrollReveal from 'scrollreveal'
 
-type ScrollRevealProps = {
+type ScrollRevealProps = HTMLAttributes<HTMLElement> & {
   children?: ReactNode
 }
 
-export default function ScrollReveal({ children }: ScrollRevealProps) {
+export default function ScrollReveal({ children, ...rest }: ScrollRevealProps) {
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -19,5 +19,9 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
       })
   }, [])
 
-  return <section ref={sectionRef}>{children}</section>
+  return (
+    <section ref={sectionRef} {...rest}>
+      {children}
+    </section>
+  )
 }
