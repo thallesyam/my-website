@@ -1,9 +1,10 @@
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { WhatsappLogo, LinkedinLogo } from 'phosphor-react'
-import { useSingleTextQuery } from '../../graphql/generated'
-import { Header } from '../Header'
+
 import { Layout } from '../Layout'
+
+import { useSingleTextQuery } from '../../graphql/generated'
 
 const ScrollReveal = dynamic(() => import('../ScrollReveal'), {
   ssr: false,

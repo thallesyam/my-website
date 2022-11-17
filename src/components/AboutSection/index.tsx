@@ -1,9 +1,11 @@
+import { Layout } from '../Layout'
+
 import About from '../../assets/about.png'
 import { Css } from '../../assets/Css'
 import { React } from '../../assets/React'
 import { Typescript } from '../../assets/Typescript'
+
 import { useSingleTextQuery } from '../../graphql/generated'
-import { Layout } from '../Layout'
 
 import style from './styles.module.scss'
 

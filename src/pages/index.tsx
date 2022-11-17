@@ -1,12 +1,13 @@
+import Head from 'next/head'
 import dynamic from 'next/dynamic'
+
+import { Header } from '../components/Header'
+import { StartSection } from '../components/StartSection'
 import { AboutSection } from '../components/AboutSection'
 import { ExperienceSection } from '../components/ExperienceSection'
-import { Footer } from '../components/Footer'
-import { SkillsSection } from '../components/SkillsSection'
 import { ProjectSection } from '../components/ProjectSection'
-import { StartSection } from '../components/StartSection'
-import Head from 'next/head'
-import { Header } from '../components/Header'
+import { SkillsSection } from '../components/SkillsSection'
+import { Footer } from '../components/Footer'
 
 import style from '../styles/pages/Home.module.scss'
 

@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import { React } from '../../assets/React'
-import { useSkillQuery } from '../../graphql/generated'
+
 import { Layout } from '../Layout'
+
+import { useSkillQuery } from '../../graphql/generated'
+
+import { React } from '../../assets/React'
 
 import style from './styles.module.scss'
 

@@ -1,7 +1,10 @@
 import Link from 'next/link'
-import { useProjectQuery } from '../../graphql/generated'
+
 import { Layout } from '../Layout'
 import { NavLink } from '../NavLink'
+
+import { useProjectQuery } from '../../graphql/generated'
+
 import style from './styles.module.scss'
 
 export function ProjectSection() {
