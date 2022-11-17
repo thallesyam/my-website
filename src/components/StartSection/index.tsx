@@ -17,9 +17,9 @@ export function StartSection() {
   const titleSpliced = data?.singleTexts[0].titleH1?.split(' ')
   const subtitle = data?.singleTexts[0].subtitle
 
-  const principal = titleSpliced?.splice(0, titleSpliced.length - 2).join(' ')
+  const principal = titleSpliced?.splice(0, titleSpliced?.length - 2).join(' ')
   const highlight = titleSpliced
-    ?.splice(titleSpliced.length - 2, titleSpliced.length)
+    ?.splice(titleSpliced?.length - 2, titleSpliced?.length)
     .join(' ')
 
   return (

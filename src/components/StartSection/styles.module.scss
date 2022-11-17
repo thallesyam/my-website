@@ -13,12 +13,12 @@
   height: 100%;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     padding: 1rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: $text-2xl;
 
     opacity: 1;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -35,10 +35,10 @@
     text-align: left;
     margin: 1rem 0 1.5rem;
     display: block;
-    font-size: 1rem;
+    font-size: $text-base;
     color: $text-gray-500;
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
       text-align: center;
     }
   }
@@ -53,8 +53,8 @@
 
     a {
       width: 100%;
-      max-width: 150px;
-      height: 40px;
+      max-width: 9.375rem;
+      height: 2.5rem;
       cursor: pointer;
       transition: filter, 0.5s;
       cursor: pointer;
@@ -68,7 +68,7 @@
       p {
         color: $white-900;
         margin: 0;
-        font-size: 0.875rem;
+        font-size: $text-sm;
       }
 
       &:hover {

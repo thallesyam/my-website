@@ -2,7 +2,7 @@
 
 .skill {
   > h5 {
-    font-size: 2.5rem;
+    font-size: $text-3xl;
 
     span {
       color: $primary-500;
@@ -13,16 +13,16 @@
     display: flex;
     gap: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
       flex-direction: column;
     }
 
     > p {
       width: 50%;
-      font-size: 1.3rem;
+      font-size: $text-lg;
       color: $text-gray-400;
 
-      @media (max-width: 768px) {
+      @media (max-width: 48rem) {
         width: 100%;
       }
     }
@@ -33,7 +33,7 @@
       flex-wrap: wrap;
       gap: 1.5rem;
 
-      @media (max-width: 768px) {
+      @media (max-width: 48rem) {
         width: 100%;
         padding: 2rem 0;
       }
@@ -48,7 +48,7 @@
         justify-content: center;
         width: 30%;
         flex-grow: 1;
-        height: 130px;
+        height: 8.125rem;
         background-color: $black-900;
         position: relative;
         border: 1px solid $black-900;
@@ -56,7 +56,7 @@
         transition: all 1s ease 0s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0s,
           transform 2s cubic-bezier(0.5, 0, 0, 1) 0s;
 
-        @media (max-width: 768px) {
+        @media (max-width: 48rem) {
           width: 40%;
         }
 
@@ -64,22 +64,22 @@
           left: 50%;
           height: auto;
           position: absolute;
-          padding: 5px;
+          padding: 0.313rem;
           transform: translate(-50%, 0%);
           background-color: $black-700;
-          width: 125px;
+          width: 7.813rem;
           color: $white-900;
           display: flex;
           justify-content: center;
           align-items: center;
           display: none;
-          font-size: 1.2rem;
-          top: -20px;
+          font-size: $text-lg;
+          top: -1.25rem;
           transition: all 1s ease 0s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0s,
             transform 2s cubic-bezier(0.5, 0, 0, 1) 0s;
 
-          @media (max-width: 768px) {
-            top: -30px;
+          @media (max-width: 48rem) {
+            top: -1.875rem;
           }
         }
 
