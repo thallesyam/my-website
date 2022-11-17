@@ -22,6 +22,25 @@ export default class MyDocument extends Document {
           />
 
           <link rel="shortcut icon" href="/favicon.ico" />
+
+          <meta
+            name="description"
+            content="Navegando pelo mundo da programação e ajudando empresas a construírem
+            jornadas inesquecíveis."
+          />
+          <meta
+            name="og:description"
+            content="Navegando pelo mundo da programação e ajudando empresas a construírem
+            jornadas inesquecíveis."
+          />
+
+          <meta name="og:title" content="Portifólio | Thalles Ian" />
+          <meta content="Thalles Ian" name="author"></meta>
+          <meta
+            content="https://portfolio-thalles-ian.vercel.app/"
+            property="og:url"
+          />
+          <meta property="og:type" content="website" />
         </Head>
         <body>
           <Main />
