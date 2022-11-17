@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
-import { NavLink } from '../NavLink'
 import { Logo } from '../../assets/Logo'
 
 import style from './styles.module.scss'
 import { MobileMenu } from '../MobileMenu'
+import { Navigation } from '../Navigation'
 
 export function Header() {
   return (
@@ -14,13 +14,13 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className={style.desktop_menu}>
-          <NavLink href="#home" text="Ínicio" />
-          <NavLink href="#about" text="Quem sou" />
-          <NavLink href="#experience" text="Experiência" />
-          <NavLink href="#project" text="Projetos" />
-          <NavLink href="#skill" text="Conhecimentos" />
-        </nav>
+        <Navigation.Root className={style.desktop_menu}>
+          <Navigation.Link href="#home" text="Ínicio" />
+          <Navigation.Link href="#about" text="Quem sou" />
+          <Navigation.Link href="#experience" text="Experiência" />
+          <Navigation.Link href="#project" text="Projetos" />
+          <Navigation.Link href="#skill" text="Conhecimentos" />
+        </Navigation.Root>
 
         <MobileMenu />
       </section>

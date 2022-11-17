@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { NavLink } from '../NavLink'
+import { Menu } from '../Menu'
+import { Navigation } from '../Navigation'
 import style from './styles.module.scss'
 
 export function MobileMenu() {
@@ -18,55 +19,46 @@ export function MobileMenu() {
     body.className = ''
   }, [isActive])
 
-  return (
-    <>
-      <button
-        className={`${style.mobile_menu} ${isActive ? style.isActive : ''}`}
-        onClick={() => setIsActive(!isActive)}
-      >
-        <div
-          className={`${style.line1} ${isActive ? style.isActive : ''}`}
-        ></div>
-        <div
-          className={`${style.line2} ${isActive ? style.isActive : ''}`}
-        ></div>
-        <div
-          className={`${style.line3} ${isActive ? style.isActive : ''}`}
-        ></div>
-      </button>
+  function handleToggle() {
+    setIsActive(!isActive)
+  }
 
-      <ul
+  return (
+    <Menu.Root>
+      <Menu.Button isActive={isActive} toggle={handleToggle} />
+
+      <Navigation.Root
         className={`
           ${style.mobile_list_menu} 
           ${isActive ? style.isActive : ''}
         `}
       >
-        <NavLink
+        <Navigation.Link
           onClick={() => setIsActive(false)}
           href="#home"
           text="Ínicio"
         />
-        <NavLink
+        <Navigation.Link
           onClick={() => setIsActive(false)}
           href="#about"
           text="Quem sou"
         />
-        <NavLink
+        <Navigation.Link
           onClick={() => setIsActive(false)}
           href="#projects"
           text="Projetos"
         />
-        <NavLink
+        <Navigation.Link
           onClick={() => setIsActive(false)}
           href="#experience"
           text="Experiência"
         />
-        <NavLink
+        <Navigation.Link
           onClick={() => setIsActive(false)}
           href="#knowledge"
           text="Conhecimentos"
         />
-      </ul>
-    </>
+      </Navigation.Root>
+    </Menu.Root>
   )
 }

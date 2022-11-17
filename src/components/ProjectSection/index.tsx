@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
 import { Layout } from '../Layout'
-import { NavLink } from '../NavLink'
+import { Title } from '../Title'
+import { Navigation } from '../Navigation'
 
 import { useProjectQuery } from '../../graphql/generated'
 
 import style from './styles.module.scss'
-import { Title } from '../Title'
 
 export function ProjectSection() {
   const { data } = useProjectQuery()
@@ -64,7 +64,7 @@ export function ProjectSection() {
         </div>
       </div>
 
-      <NavLink
+      <Navigation.Link
         className={style.githubLink}
         href="https://www.github.com/thallesyam"
         text="Repositórios no github"
