@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../';
 
 .container {
   padding: 6rem 4rem;
@@ -9,5 +9,5 @@
 }
 
 .container.light {
-  background-color: #0e0e0e;
+  background-color: $black-800;
 }

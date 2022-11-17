@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles';
 
 .project {
   display: flex;
@@ -29,7 +29,7 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 2rem;
-      background-color: #000;
+      background-color: $black-900;
       min-height: 263px;
 
       p {
@@ -72,7 +72,7 @@
         }
 
         .github {
-          background-color: #161b22;
+          background-color: $black-600;
         }
 
         .view_project {

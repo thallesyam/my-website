@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles';
 
 .experience {
   > h3 {
@@ -83,7 +83,7 @@
       .content_body {
         font-size: 1.25rem;
         line-height: 1.8rem;
-        color: #d4d4d4;
+        color: $text-gray-400;
         margin: 1.5rem 0 0;
       }
     }

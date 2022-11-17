@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './';
 
 html,
 body {
@@ -16,7 +16,7 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #000;
+  background-color: $black-900;
 }
 ::-webkit-scrollbar-thumb {
   background-color: $primary-500;
