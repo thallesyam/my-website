@@ -1,4 +1,5 @@
 import { Layout } from '../Layout'
+import { Title } from '../Title'
 
 import About from '../../assets/about.png'
 import { Css } from '../../assets/Css'
@@ -16,7 +17,7 @@ export function AboutSection() {
   return (
     <Layout className={style.about}>
       <div className={style.icon_container}>
-        <img src={About} alt="" />
+        <img src={About} alt="Quem sou" />
 
         <div className={`${style.tech_icon} ${style.first_icon}`}>
           <Typescript />
@@ -30,9 +31,7 @@ export function AboutSection() {
       </div>
 
       <div className={style.text_container}>
-        <h2>
-          Quem sou <span>.</span>
-        </h2>
+        <Title text="Quem sou" tagName="h2" />
 
         <p>{about}</p>
       </div>

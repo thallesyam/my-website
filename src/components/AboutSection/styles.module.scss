@@ -87,21 +87,11 @@
   }
 
   .text_container {
-    h2 {
-      font-size: $text-3xl;
-      color: $text-white-500;
-      margin: 0;
-
-      span {
-        color: $primary-500;
-      }
-    }
-
     p {
       font-size: $text-lg;
       line-height: 1.8rem;
       color: $text-gray-400;
-      margin: 1.5rem 0 0;
+      margin: 0;
     }
   }
 }

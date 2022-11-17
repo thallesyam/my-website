@@ -1,14 +1,6 @@
 @import '../../styles';
 
 .experience {
-  > h3 {
-    font-size: $text-3xl;
-
-    span {
-      color: $primary-500;
-    }
-  }
-
   .container {
     display: flex;
     gap: 2rem;

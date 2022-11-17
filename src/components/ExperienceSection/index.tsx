@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { Layout } from '../Layout'
+import { Title } from '../Title'
 
 import { useJobQuery } from '../../graphql/generated'
 
@@ -20,9 +21,7 @@ export function ExperienceSection() {
 
   return (
     <Layout className={style.experience}>
-      <h3>
-        Experiência <span>.</span>
-      </h3>
+      <Title text="Experiência" tagName="h3" />
 
       <div className={style.container}>
         <div className={style.tab_container}>

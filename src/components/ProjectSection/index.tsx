@@ -6,15 +6,14 @@ import { NavLink } from '../NavLink'
 import { useProjectQuery } from '../../graphql/generated'
 
 import style from './styles.module.scss'
+import { Title } from '../Title'
 
 export function ProjectSection() {
   const { data } = useProjectQuery()
 
   return (
     <Layout className={style.project}>
-      <h4>
-        Projetos <span>.</span>
-      </h4>
+      <Title text="Projetos" tagName="h4" />
 
       <div className={style.cards_container}>
         {data?.projects.map((project) => (

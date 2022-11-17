@@ -11,6 +11,7 @@ const ScrollReveal = dynamic(() => import('../ScrollReveal'), {
 })
 
 import style from './styles.module.scss'
+import { Title } from '../Title'
 
 export function StartSection() {
   const { data } = useSingleTextQuery()
@@ -26,10 +27,11 @@ export function StartSection() {
     <section className={style.start_container}>
       <Layout className={style.title_section} id="home" size="sm">
         <ScrollReveal>
-          <h1>
-            {principal}
-            <span>{highlight}</span>
-          </h1>
+          <Title
+            text={principal as string}
+            tagName="h1"
+            highlightText={highlight}
+          />
         </ScrollReveal>
 
         <p>{subtitle}</p>

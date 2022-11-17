@@ -1,14 +1,6 @@
 @import '../../styles';
 
 .skill {
-  > h5 {
-    font-size: $text-3xl;
-
-    span {
-      color: $primary-500;
-    }
-  }
-
   .techs_container {
     display: flex;
     gap: 2rem;

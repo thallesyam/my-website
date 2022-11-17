@@ -7,6 +7,7 @@ import { useSkillQuery } from '../../graphql/generated'
 import { React } from '../../assets/React'
 
 import style from './styles.module.scss'
+import { Title } from '../Title'
 
 export function SkillsSection() {
   const { data } = useSkillQuery()
@@ -26,9 +27,7 @@ export function SkillsSection() {
 
   return (
     <Layout className={style.skill}>
-      <h5>
-        Conhecimentos <span>.</span>
-      </h5>
+      <Title text="Conhecimentos" tagName="h5" />
 
       <div className={style.techs_container}>
         <p>{!!skillHover ? skillHover : '*Passe o mouse para ler o card*'}</p>

@@ -1,0 +1,11 @@
+@import '../../styles';
+
+.title {
+  font-size: $text-3xl;
+  color: $text-white-500;
+  margin-bottom: 1.5rem;
+
+  span {
+    color: $primary-500;
+  }
+}
