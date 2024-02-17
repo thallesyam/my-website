@@ -28,6 +28,7 @@ export default class MyDocument extends Document {
                 'https://connect.facebook.net/en_US/fbevents.js');
                 fbq('init', '789889939850023');
                 fbq('track', 'PageView');
+                fbq('track', 'ViewContent');
               `,
             }}
           />
